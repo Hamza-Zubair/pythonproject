@@ -1,0 +1,33 @@
+from tkinter import *
+
+def storage():
+    
+    a = entry1.get()
+    return a
+
+#    a1= entry1_2.get()
+#    return a
+window = Tk()
+window.title("Student Housing")
+window.configure(width=600, height=400, bg="gray")
+window.geometry("500x300")
+#TENANT1 NAME AND EMAIL
+t1name = Label(window, text="Tenant1 Name:", bg="gray", fg="white")
+t1name.place(x=5, y = 10)
+entry1 = Entry(window)
+entry1.pack()
+entry1.place(x=100, y = 10)
+#t1mail = Label(window, text="Tenant1 Email:", bg="gray", fg="white")
+#t1mail.place(x=250, y = 10)
+#entry1_2 = Entry(window)
+#entry1_2.place(x=350, y = 10)
+#label2 = Label(window, text="Tenant 2 Name:", bg="gray", fg="white")
+#label2.place(x=5, y = 50)
+name = askstring("Name", "Enter your name")
+submit= Button(window, text = "Submit", command= storage)
+submit.place(x=200,y=200)
+submit.pack()
+window.mainloop()
+
+print (storage())
+
